@@ -1,0 +1,219 @@
+http://blog.csdn.net/clementad/article/details/51334064
+
+http://www.cnblogs.com/sunniest/p/4555801.html
+
+全天候地图服务：
+http://192.168.5.62:6080/arcgis/rest/services/SD_Provincial_ZF/JCTB_QTH/MapServer
+
+
+System.Collections.Concurrent.Partitioner
+  System.Linq.ParallelQuery
+
+Type type22 = Type.GetType("ConsoleApplication1.Employee"); // typeof(Employee);
+IEmployee aaaaa = (IEmployee)Activator.CreateInstance(type22);
+反射实例化
+
+await
+
+http://www.cnblogs.com/best/p/5638827.html
+
+安装地址 http://m2eclipse.sonatype.org/sites/m2e
+
+
+insert into sg_sde(MID, shape) 
+select mid, replace(substr(sdo_util.to_clob(shape), 39, length(sdo_util.to_clob(shape)) - 39 -1 ),'|',',')  from phalaenopsis_sde.jctb_qth;
+
+Calendar.getInstance().get(Calendar.YEAR);
+
+
+一台机器配置两个tomcat
+http://jingyan.baidu.com/article/0eb457e50fabcc03f0a9056d.html
+Map<Class<?>, Constructor<?>[]>
+
+
+    <!-- 编码过滤器 -->  
+    <filter>  
+        <filter-name>encodingFilter</filter-name>  
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+        <async-supported>true</async-supported>  
+        <init-param>  
+            <param-name>encoding</param-name>  
+            <param-value>UTF-8</param-value>  
+        </init-param>  
+    </filter>  
+    <filter-mapping>  
+        <filter-name>encodingFilter</filter-name>  
+        <url-pattern>/*</url-pattern>  
+    </filter-mapping>  
+
+
+<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+
+spring 编程式事务
+@Autowired
+private DataSourceTransactionManager transactionManager;
+
+public void test() {
+	DefaultTransactionDefinition defaultTransactionDefinition = new DefaultTransactionDefinition();
+	defaultTransactionDefinition.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
+	TransactionStatus status = transactionManager.getTransaction(defaultTransactionDefinition);
+	try{
+	}catch(Exception ex){
+		transactionManager.rollback(status);
+	}
+	transactionManager.commit(status);
+}
+
+
+
+
+wmsys.wm_concat
+
+Oracle:
+
+Oracle递归查询
+Select * from T start with t.id = V connect by prior id = parentid
+
+
+
+
+
+一个Oracle实例对应多个数据库
+1，一个数据库可以包含多个表空间，一个表空间只能属于一个库
+2，一个表空间可以包含多个数据文件
+
+一个表空间有多个段。一个表对应一个段，一个索引对应一个段。一个段由多个区间组成
+
+
+临时表空间：
+当做一次大数据量查询，本地内存无法存储这么大数据量的数据，磁盘会在临时表中间中将查询的数据存储。Oracle会用这个临时表空间做排序
+
+查询有哪些表空间语句：
+select * from V$tablespace;
+
+查询表空间和表空间对应的数据文件语句：
+select file_name,tablespace_name from dba_data_files;
+
+查询有哪些用户表
+select * from user_tables t where t.TABLE_NAME like 'TD%';
+
+
+
+
+查询Oracle缓冲区语句：
+select name, value from v$sysstat;
+
+select name, value from v$sysstat where name in('db block gets','consistent gets','physical reads');
+
+
+查询完成的磁盘读写次数
+select Name, phyrds, phywrts from V$datafile df, V$FILESTAT fs where df.FILE# = fs.FILE#;
+
+
+
+select 1 - ((physical.value - direct.value - lobs.value) / logical.value)
+"Buffer Cache Hit Ratio" 
+from v$sysstat physical,v$sysstat direct,v$sysstat lobs,v$sysstat logical
+where physical.name = 'physical reads'
+and direct.name='physical reads direct'
+and lobs.name='physical reads direct (lob)'
+and logical.name='session logical reads';
+
+
+
+Oracle计算某某值最大的所有记录
+select * from WF_History a where a.sequence = (select max(b.sequence) from WF_History b where a.instanceId = b.instanceId)
+
+
+Oracle主键一定有唯一约束
+*索引分聚合索引和非聚合索引。Oracle索引都是非聚合索引
+*在Oracle11g之前不能缓冲Clob和Blob字段，对数据库性能有一定影响
+*物化视图是将视图存储在物理存储设备中，当每次更新原数据时，都需要重新更新物化视图
+
+
+
+
+考虑问题：
+外网文件服务器
+
+
+判断是否有无参构造函数
+ConstructorInfo ctor = t.GetConstructor(Type.EmptyTypes);
+
+
+
+网络编程：
+依赖-被依赖 关系
+end-to-end principle
+happens-before relationship
+
+TCP网络编程
+1. 需要了解网络的基本结构和组成
+2. 详细了解TCP/IP网络原理
+3. 学会网络编程
+4. 路由技术
+5. 二层交换技术
+6. 协议规范
+
+
+计算机科学丛书-TCP/IP详解卷：
+TCP/IP详解卷2：实现
+TCP/IP详解（卷3：TCP事务协议、HTTP、NNTP和UNIX域协议）
+
+深入理解linux网络技术内幕
+
+UNIX网络编程（卷1）：套接字联网API（第3版）
+UNIX网络编程（卷2）：进程间通信（第2版）
+UNIX环境高级编程（第3版）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+D:\Java\apache-tomcat-8.0.37\bin\catalina.bat run
+[2017-01-19 06:21:57,490] Artifact Clematis:war: Server is not connected. Deploy is not available.
+The JRE_HOME environment variable is not defined correctly
+This environment variable is needed to run this program
+Disconnected from server
+
+
+AngularJS:
+
+ng-class
+<div ng-class="{true:‘zhende‘,false:‘jiade‘}[className]"></div>
+<div ng-class="{‘selectClass‘:select,‘choiceClass‘:choice,‘haha‘:lala}"></div>
+
+{{isJudgeShow==true?'收起':'展开'}} 三目表达式
+
+pointer-events: none; 去掉hover
+https://css-tricks.com/
+
+    box-shadow: none; 是否显示阴影
+
+.home-select:disabled {
+    border-color: #b7b7b7;
+    background-color: #d7d7d7;
+}
+
+        Array.prototype.insert = function (index, item) {
+            this.splice(index, 0, item);
+        }; 给原型添加方法
+
+AngularJs Controller之间传值
+$emit   子控制器传递给父控制器、
+$broadcast 父控制器传递给子
+使用 $scope.$on 进行获取

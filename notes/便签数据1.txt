@@ -1,0 +1,28 @@
+spring boot学习：
+http://blog.csdn.net/isea533/article/details/50359390
+https://juejin.im/post/592c08292f301e006c60cae2
+https://www.tianmaying.com/tutorial/mybatis-spring
+https://github.com/roncoo/spring-boot-demo
+https://spring.io/blog/2015/02/03/sso-with-oauth2-angular-js-and-spring-security-part-v
+
+swagger ?resuful 接口API文档
+https://www.cnblogs.com/FlyAway2013/p/7510279.html
+druid   阿里提供的关系型数据库连接池
+http://www.cnblogs.com/dream-to-pku/p/7463594.html
+OAuth2
+
+http://192.168.5.15:6015/swagger-ui.html
+{"account":"MzcwMTAyMDE=","password":"ODg4","endpoint":"client"}
+
+Nested 嵌套
+
+1、Java中明显与.net不同的地方。
+     1.集合类型，问号、波浪符等
+     2.泛型的区别
+     3.编码规范的区别，要提一下
+     4.java注解与.net特性
+4、项目中的用到的组件或者中间件
+5、配置文件配置的位置及方式
+6、如何完成一个服务的编写
+7、如何进行调试，只用介绍idea
+9、maven的作用，如何打包

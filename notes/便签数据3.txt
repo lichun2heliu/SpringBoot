@@ -1,0 +1,29 @@
+FastDFS
+https://www.cnblogs.com/Leo_wl/p/6731647.html
+
+
+Swagger注解
+https://www.jianshu.com/p/67c9b84226cd
+
+https://crane-yuan.github.io/2016/08/23/The-ways-of-copy-file/
+
+mybatis 封装
+http://blog.csdn.net/guoshengkai373/article/details/51461242
+
+mybatis update中添加join
+update ( select bonus
+           from employee_bonus b
+          inner join employees e on b.employee_id = e.employee_id
+          where e.bonus_eligible = 'N' ) t
+ set t.bonus = 0
+
+
+
+redis操作
+http://blog.csdn.net/achenyuan/article/details/77366103
+http://blog.csdn.net/zzh920625/article/details/78027534
+
+mongodb update更新数据
+http://blog.csdn.net/sunnyyoona/article/details/52420210
+
+
