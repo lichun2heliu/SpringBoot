@@ -1,0 +1,66 @@
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+Phalaenopsis.iml
+
+# Gradle:
+.idea/gradle.xml
+.idea/
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+# ignore eclipse files
+
+##ignore this file##
+/target/
+.classpath
+.project
+.settings 
+
+##filter databfile¡¢sln file##
+*.mdb  
+*.ldb  
+*.sln   
+
+##class file##
+*.com  
+*.class  
+*.dll  
+*.exe  
+*.o  
+*.so 
+
+# compression file
+*.7z  
+*.dmg  
+*.gz  
+*.iso  
+*.jar  
+*.rar  
+*.tar  
+*.zip  
+*.via
+*.tmp
+*.err
+
+# OS generated files #  
+.DS_Store  
+.DS_Store?  
+._*  
+.Spotlight-V100  
+.Trashes  
+Icon?  
+ehthumbs.db  
+Thumbs.db  
