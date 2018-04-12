@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kotei.allweather.mapper.DictionaryMapper">
+
+    <select id="getAllDictionaries" resultType="com.kotei.allweather.entity.DataDictionary">
+        select * from SS_DATADICTIONARY t where t.module = 'NewProject'
+    </select>
+
+    <insert id="inserta">
+        insert into testa
+        (aaaa, bbbb)
+        values
+        ('啦啦', '哈哈')
+    </insert>
+
+    <insert id="insertb">
+        insert into testa
+        (aaaa, bbbb)
+        values
+        ('啦啦a', '哈哈a')
+    </insert>
+
+</mapper>
