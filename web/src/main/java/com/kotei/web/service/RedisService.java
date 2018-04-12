@@ -1,6 +1,9 @@
 package com.kotei.web.service;
 
 import com.kotei.web.entity.People;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.data.redis.core.RedisTemplate;
+//import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
@@ -23,20 +26,22 @@ public class RedisService {
 
     /**
      * add method
+     *
      * @param key
      * @param people
      */
-    public void addPeople(String key, People people){
+    public void addPeople(String key, People people) {
         ValueOperations<String, Object> valueOperations = redisTemplate.opsForValue();
         valueOperations.set(key, people);
     }
 
     /**
      * get method
+     *
      * @param key
      * @return
      */
-    public People getPeople(String key){
+    public People getPeople(String key) {
         ValueOperations<String, Object> valueOperations = redisTemplate.opsForValue();
         return (People) valueOperations.get(key);
     }

@@ -1,12 +1,7 @@
 package com.kotei.web.service.impl;
 
-import com.kotei.web.dao.UserMapper;
-import com.kotei.web.entity.User;
 import com.kotei.web.service.TestService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * 项目名称：phalaenopsis
@@ -19,10 +14,10 @@ import java.util.List;
 @Service
 public class TestServiceImpl implements TestService {
 
-    @Autowired
-    private UserMapper userMapper;
-
-    public List<User> getUsers() {
-        return userMapper.getUsers();
-    }
+//    @Autowired
+//    private UserMapper userMapper;
+//
+//    public List<User> getUsers() {
+//        return userMapper.getUsers();
+//    }
 }

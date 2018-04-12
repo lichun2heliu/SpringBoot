@@ -8,10 +8,25 @@
         </encoder>
     </appender>
 
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 配置滚动的策略 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 日志名称的格式 -->
+            <fileNamePattern>${LOG_HOME}/logback.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <!-- 保存的最长时间：天数 -->
+            <MaxHistory>1</MaxHistory>
+        </rollingPolicy>
+
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50}:  %msg%n</pattern>
+        </encoder>
+    </appender>
+
     <root level="INFO">
         <appender-ref ref="stdout"/>
     </root>
 
     <logger name="com.kotei" level="DEBUG"/>
+
 
 </configuration>
